@@ -58,7 +58,7 @@ export const Page: FC = () => {
                                 <CarouselItemPicture>
                                     <Image 
                                         fallback={InitialPicture} 
-                                        src={item.imageUrl}
+                                        src={`http://localhost:8000/${item.imageUrl}`}
                                         alt={item.title} 
                                     />
                                 </CarouselItemPicture>
