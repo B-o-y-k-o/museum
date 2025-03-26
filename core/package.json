@@ -19,6 +19,7 @@
   "homepage": "https://github.com/B-o-y-k-o/museum#readme",
   "dependencies": {
     "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
     "express": "^4.21.2",
     "mongodb": "^6.15.0"
   },

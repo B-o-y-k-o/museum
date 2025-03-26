@@ -24,7 +24,7 @@ let photos = [
     }
 ];
 
-app.get('/api/photos', (req, res) => {
+app.get('/photos', (req, res) => {
     res.json(photos);
 });
 
