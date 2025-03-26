@@ -26,5 +26,6 @@ export const layoutStyle = {
     overflow: 'hidden',
     width: '100%',
     maxWidth: 1440,
-    height: '100vh'
+    height: '100vh',
+    backgroundImage: 'url(&quot;./templates/okk/images/bg.jpg&quot;)'
 };

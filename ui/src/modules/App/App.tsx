@@ -4,6 +4,7 @@ import { Page } from '../Page'
 export const App: FC = () => {
 
   return (
-    <Page />
+    <div></div>
+    // <Page />
   )
 }
