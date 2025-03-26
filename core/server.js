@@ -1,26 +1,36 @@
 const express = require('express');
-const MongoClient = require('mongodb').MongoClient;
-const bodyParser = require('body-parser');
-const routes = require('./app/routes');
-const db = require('./config/db');
+const cors = require('cors');
+
 
 const app = express();
-const port = 8000;
+const PORT = 8000;
 
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(cors());
+app.use(express.json());
+app.use('/uploads', express.static('uploads'));
 
-MongoClient.connect(db.url, (err, dataBase) => {
-    if (err) {
-        return console.log('ERROR: ', err);
-    };
+let photos = [
+    {
+        id: 1,
+        title: "Пример фото 1",
+        description: "Это описание первого фото",
+        imageUrl: "uploads/example1.jpg"
+    },
+    {
+        id: 2,
+        title: "Пример фото 2",
+        description: "Это описание второго фото",
+        imageUrl: "uploads/example2.jpg"
+    }
+];
 
-    require('./app/routes')(app, dataBase);
-
-    app.listen(port, () => {
-        console.log('LISTEN: ', port);
-    });
+app.get('/api/photos', (req, res) => {
+    res.json(photos);
 });
 
+app.listen(PORT, () => {
+console.log(`Сервер запущен на порту ${PORT}`);
+});
 
 
 
