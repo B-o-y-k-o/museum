@@ -11,8 +11,8 @@ export const App: FC = () => {
           Carousel:{
             arrowSize: 60,
             arrowOffset: -30,
-          }
-        }
+          },
+        },
       }}
     >
         <Page />

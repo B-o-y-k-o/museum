@@ -1,6 +1,8 @@
+body {
+  background: linear-gradient(180deg, #FCF8DB 0%, #68C5FF 30%, #FFFFFF 70%);
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
-  background: linear-gradient(180deg, #006064 0%, #5DC8CD 100%);
-  background-image: url(&quot;./templates/okk/images/bg.jpg&quot;);
 }

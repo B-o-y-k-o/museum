@@ -5,22 +5,21 @@ export const PageStyled = styled.div.attrs({className: 'page'})`
     margin: 0 auto;
     max-width: 1440px;
     height: 100vh;
+    background: none;
 `;
 
 export const HeaderPage = styled.div.attrs({className: 'header-page'})`
     height: 100px;
-    background-color: '#006064';
     width: '100%';
     max-width: 1440px;
     display: flex;
     margin: 0 auto;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(180deg, #006064 0%, #5DC8CD 100%);
-    border-bottom: solid 10px #5DC8CD ;
     font-size: 24px;
-    color: #fff;
+    color: #F8AA48;
     padding: 20px;
+    background: none;
 `;
 
 export const MainPage = styled.div.attrs({className: 'main-page'})`
@@ -28,32 +27,37 @@ export const MainPage = styled.div.attrs({className: 'main-page'})`
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #01939A;
-    background: linear-gradient(180deg, #5DC8CD 0%, #006064 100%);
+    background: none;
 `;
 
 export const CarouselContainer = styled.div.attrs({className: 'main-page__carousel-container'})`
     width: 100%;
     height: calc(100vh - 300px);
-    border: solid 10px #01939A;
+    border: solid 10px #008DD2;
     border-radius: 8px;
-    padding: 20px 200px;
-    background-color: #006064;
-    overflow: hidden;
+    padding: 20px 120px;
+    vertical-align: top;
+    background: none;
+    -webkit-box-shadow: -20px -20px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: -20px -20px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: -20px -20px 8px 0px rgba(34, 60, 80, 0.2);;
 `;
 
 export const PictureContainer = styled.div.attrs({className: 'main-page__picture-container'})`
-    border: solid 10px #01939A;
+    border: solid 10px #008DD2;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 220px;
-    height: 220px;
+    width: 214px;
+    height: 214px;
     overflow: hidden;
-    position: absolute;
-    top: 110px;
-    left: 10px;
+    position: relative;
+    top: -142px;
+    left: -230px;
+    -webkit-box-shadow: -20px -20px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: -20px -20px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: -20px -20px 8px 0px rgba(34, 60, 80, 0.2);
 `;
 
 export const CarouselItem = styled.div.attrs({className: 'main-page__carousel-container_carousel-item'})`
@@ -62,14 +66,14 @@ export const CarouselItem = styled.div.attrs({className: 'main-page__carousel-co
     flex-direction: column;
     gap: 10px;
     justify-content: space-between;
+    position: relative;
 `;
 
 export const CarouselItemName = styled.div`
     display: flex;
     justify-content: center;
     padding: 10px;
-    background-color: #006064;
-    color: #fff;
+    color: #008DD2;
     font-size: 24px;
     font-weight: 600;
 `;
@@ -78,9 +82,8 @@ export const CarouselItemDescription = styled.div`
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    color: #fff;
+    color: #008DD2;
     padding: 10px;
-    background-color: #006064;
     text-align: center;
 `;
 export const CarouselItemPicture = styled.div`
@@ -90,15 +93,18 @@ export const CarouselItemPicture = styled.div`
     justify-content: center;
     padding: 10px;
     overflow: hidden;
-    background-color: #006064;
 `;
 
 export const TitlePage = styled.div.attrs({className: 'title-page'})`
-    background: linear-gradient(180deg, #5DC8CD 0%, #54BEC3 100%);
     display: flex;
     justify-content: center;
-    color: #fff;
+    color: #E41B45;
     font-size: 60px;
     position: absolute;
     left: calc(50% - 207px);
 `;
+
+export const CarouselStyled = styled.div`
+    position: relative;
+    top: -220px;
+`
