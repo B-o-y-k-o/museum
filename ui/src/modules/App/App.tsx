@@ -1,10 +1,21 @@
-import { FC } from 'react'
-import { Page } from '../Page'
+import { FC } from 'react';
+import { Page } from '../Page';
+import { ConfigProvider } from 'antd';
 
 export const App: FC = () => {
 
   return (
-    <div></div>
-    // <Page />
+    <ConfigProvider
+      theme={{
+        components:{
+          Carousel:{
+            arrowSize: 60,
+            arrowOffset: -30,
+          }
+        }
+      }}
+    >
+        <Page />
+    </ConfigProvider>
   )
 }

@@ -1,6 +1,6 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  background-color: #4096FF;
+  background: linear-gradient(180deg, #006064 0%, #5DC8CD 100%);
   background-image: url(&quot;./templates/okk/images/bg.jpg&quot;);
 }
