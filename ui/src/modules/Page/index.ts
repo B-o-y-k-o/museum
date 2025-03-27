@@ -1,1 +1,1 @@
-export {Page} from './Page';
+export {PageUser} from './Page';

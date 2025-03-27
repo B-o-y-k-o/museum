@@ -3,9 +3,10 @@ import { CarouselContainer, CarouselItem, CarouselItemDescription, CarouselItemN
 import GerbPicture from '../../../public/gerb_svg.svg';
 import LogoPicture from '../../../public/logo.jpg';
 import InitialPicture from '../../../public/initialPicture.png'
-import { Carousel, Image } from 'antd';
+import { Carousel, ConfigProvider, Image } from 'antd';
+import { Link } from 'react-router-dom';
 
-export const Page: FC = () => {
+export const PageUser: FC = () => {
     const [data, setData] = useState<{
         id: number
         title: string,
@@ -32,47 +33,59 @@ export const Page: FC = () => {
     }, [])
 
     return (
-        <PageStyled>
-            <HeaderPage>
-                ГБОУ СОШ № 323 Невского района Санкт-Петербурга
-                <img style={{background: 'none'}} src={GerbPicture}/>
-            </HeaderPage>
-            <TitlePage>
-                Музейный фонд
-            </TitlePage>
-            <MainPage>
-                <CarouselContainer>
-                    <PictureContainer>
-                        <img 
-                            style={{width: '200px'}} 
-                            src={LogoPicture} 
-                        />
-                    </PictureContainer>
-                    <CarouselStyled>
-                        <Carousel arrows dots={false}> 
-                        {data?.map((item) => (
-                            <CarouselItem key={item.id}>
-                                <CarouselItemName>
-                                    {item.title}
-                                </CarouselItemName>
-                                <CarouselItemPicture>
-                                    <Image 
-                                        fallback={InitialPicture} 
-                                        src={`http://localhost:8000/${item.imageUrl}`}
-                                        alt={item.title} 
-                                    />
-                                </CarouselItemPicture>
-                                <CarouselItemDescription>
-                                    {item.description}
-                                </CarouselItemDescription>
-                            </CarouselItem>
-                        ))}
-                    </Carousel>
-                    </CarouselStyled>
-                    
-                </CarouselContainer>
-            </MainPage>
-        </PageStyled>
-        
+        <ConfigProvider
+            theme={{
+                components:{
+                Carousel:{
+                    arrowSize: 60,
+                    arrowOffset: -30,
+                },
+                },
+            }}
+        >
+            <PageStyled>
+                <HeaderPage>
+                    ГБОУ СОШ № 323 Невского района Санкт-Петербурга
+                    <Link to='/auth'>
+                        <img style={{background: 'none'}} src={GerbPicture}/>
+                    </Link>
+                </HeaderPage>
+                <TitlePage>
+                    Музейный фонд
+                </TitlePage>
+                <MainPage>
+                    <CarouselContainer>
+                        <PictureContainer>
+                            <img 
+                                style={{width: '200px'}} 
+                                src={LogoPicture} 
+                            />
+                        </PictureContainer>
+                        <CarouselStyled>
+                            <Carousel arrows dots={false}> 
+                            {data?.map((item) => (
+                                <CarouselItem key={item.id}>
+                                    <CarouselItemName>
+                                        {item.title}
+                                    </CarouselItemName>
+                                    <CarouselItemPicture>
+                                        <Image 
+                                            fallback={InitialPicture} 
+                                            src={`http://localhost:8000/${item.imageUrl}`}
+                                            alt={item.title} 
+                                        />
+                                    </CarouselItemPicture>
+                                    <CarouselItemDescription>
+                                        {item.description}
+                                    </CarouselItemDescription>
+                                </CarouselItem>
+                            ))}
+                        </Carousel>
+                        </CarouselStyled>
+                        
+                    </CarouselContainer>
+                </MainPage>
+            </PageStyled>
+        </ConfigProvider>
     )
 }
