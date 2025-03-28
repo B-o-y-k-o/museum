@@ -9,7 +9,7 @@ export const PageStyled = styled.div.attrs({className: 'page'})`
 `;
 
 export const HeaderPage = styled.div.attrs({className: 'header-page'})`
-    height: 100px;
+    max-height: 100px;
     width: '100%';
     max-width: 1440px;
     display: flex;
@@ -67,4 +67,71 @@ export const TitlePage = styled.div.attrs({className: 'title-page'})`
     font-size: 60px;
     position: absolute;
     left: calc(50% - 306px);
+`;
+
+export const FormContainer = styled.div.attrs({className: 'admin-form-container'})`
+    display: flex;
+    position: relative;
+    top: -200px;
+    left: 190px;
+    flex-direction: column;
+    gap: 10px;
+    border: solid 4px #008DD2;
+    border-radius: 8px;
+    width: 600px;
+    height: 520px;
+    -webkit-box-shadow: -20px -20px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: -20px -20px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: -20px -20px 8px 0px rgba(34, 60, 80, 0.2);
+`;
+
+export const TableContainer = styled.div.attrs({className: 'admin-form-container'})`
+display: flex;
+position: relative;
+top: -200px;
+flex-direction: column;
+gap: 10px;
+border: solid 4px #008DD2;
+border-radius: 8px;
+width: 980px;
+height: 520px;
+overflow-y: auto;
+-webkit-box-shadow: -20px -20px 8px 0px rgba(34, 60, 80, 0.2);
+-moz-box-shadow: -20px -20px 8px 0px rgba(34, 60, 80, 0.2);
+box-shadow: -20px -20px 8px 0px rgba(34, 60, 80, 0.2);
+`;
+
+export const FormContentContainer = styled.div.attrs({className: 'modal-content-container'})`
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+`;
+
+export const InputContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+`;
+
+export const ErrorMessage = styled.span`
+    color: red;
+`;
+
+export const ButtonContainer = styled.div.attrs({className: 'main-page__picture-container'})`
+border: solid 10px #008DD2;
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 214px;
+height: 30;
+overflow: hidden;
+position: relative;
+top: -142px;
+left: -230px;
+background-color: #fff;
+-webkit-box-shadow: -20px -20px 8px 0px rgba(34, 60, 80, 0.2);
+-moz-box-shadow: -20px -20px 8px 0px rgba(34, 60, 80, 0.2);
+box-shadow: -20px -20px 8px 0px rgba(34, 60, 80, 0.2);
 `;

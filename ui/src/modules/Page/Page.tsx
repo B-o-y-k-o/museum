@@ -1,8 +1,8 @@
 import { FC, useEffect, useState } from 'react';
 import { CarouselContainer, CarouselItem, CarouselItemDescription, CarouselItemName, CarouselItemPicture, CarouselStyled, HeaderPage, MainPage, PageStyled, PictureContainer, TitlePage } from './styled';
-import GerbPicture from '../../../public/gerb_svg.svg';
-import LogoPicture from '../../../public/logo.jpg';
-import InitialPicture from '../../../public/initialPicture.png'
+import GerbPicture from '../../icons/gerb_svg.svg';
+import LogoPicture from '../../picture/logo.jpg';
+import InitialPicture from '../../picture/initialPicture.png'
 import { Carousel, ConfigProvider, Image } from 'antd';
 import { Link } from 'react-router-dom';
 
@@ -46,7 +46,7 @@ export const PageUser: FC = () => {
             <PageStyled>
                 <HeaderPage>
                     ГБОУ СОШ № 323 Невского района Санкт-Петербурга
-                    <Link to='/auth'>
+                    <Link to='/admin'>
                         <img style={{background: 'none'}} src={GerbPicture}/>
                     </Link>
                 </HeaderPage>
