@@ -4,7 +4,7 @@ type Inputs = {
     title: string;
     picture: unknown;
     description: string;
-  };
+};
 
 export const getValidationSchema = (): Yup.ObjectSchema<Inputs> =>
     Yup.object({
